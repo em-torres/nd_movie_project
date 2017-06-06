@@ -6,8 +6,8 @@ from flask import Blueprint, request, render_template, \
 # from app.mod_auth.models import User
 
 # Define the blueprint: 'auth', set its url prefix: app.url/auth
-mod_auth = Blueprint('auth', __name__, url_prefix='/auth')
-hello = Blueprint('hello', __name__, url_prefix='/')
+mod_auth = Blueprint('auth', __name__, url_prefix='/auth', template_folder='../templates')
+mod_homepage = Blueprint('/', __name__, url_prefix='/', template_folder='../templates')
 
 # Set the route and accepted methods
 # @mod_auth.route('/signin/', methods=['GET', 'POST'])
@@ -26,6 +26,6 @@ hello = Blueprint('hello', __name__, url_prefix='/')
 #     return render_template("auth/signin.html", form=form)
 
 
-@mod_auth.route('/', methods=['GET', 'POST'])
+@mod_homepage.route('/', methods=['GET', 'POST'])
 def hello():
     return render_template("home.html")

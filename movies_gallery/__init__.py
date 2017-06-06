@@ -1,11 +1,13 @@
 # Import flask and template operators
-from flask import Flask, render_template
+from flask import Blueprint, Flask, render_template
 
 # Import SQLAlchemy
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 # Import a module / component using its blueprint handler variable (mod_auth)
 from movies_gallery.controllers import mod_auth as auth_module
+from movies_gallery.controllers import mod_homepage as homepage_module
+
 
 # Define the WSGI application object
 app = Flask(__name__)
@@ -24,11 +26,8 @@ db = SQLAlchemy(app)
 
 # Register blueprint(s)
 app.register_blueprint(auth_module)
-# app.register_blueprint(xyz_module)
-# ..
+app.register_blueprint(homepage_module)
 
 # Build the database:
 # This will create the database file using SQLAlchemy
 db.create_all()
-
-# import movies_gallery.views
