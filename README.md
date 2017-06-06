@@ -1,2 +1,3 @@
-# nd_movie_project
-Udacity's Nano Degree Movie Project made with Flask and Bulma
+# FSND Movie Project
+
+Udacity's Full Stack Nano Degree Movie Project made with Flask and Bulma. 

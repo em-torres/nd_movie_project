@@ -1,0 +1,9 @@
+# Database
+.db
+
+# Jetbrains IDE
+.idea
+
+# Python Modules
+.pyc
+__pycache__
