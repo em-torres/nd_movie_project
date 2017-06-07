@@ -13,7 +13,7 @@ from movies_gallery.controllers import mod_homepage as homepage_module
 app = Flask(__name__)
 
 # Configurations
-app.config.from_object('config')
+app.config.from_object('config.DevelopmentConfig')
 
 # Define the database object which is imported
 # by modules and controllers
