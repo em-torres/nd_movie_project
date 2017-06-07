@@ -7,3 +7,6 @@
 # Python Modules
 .pyc
 __pycache__
+
+# Environment Files
+.env
