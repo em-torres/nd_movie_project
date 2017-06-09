@@ -1,4 +1,3 @@
-
 // Pause the video when the modal is closed
 $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
     // Remove the src so the player itself gets removed, as this is the only
@@ -16,6 +15,7 @@ $(document).on('click', '.movie-tile', function (event) {
       'frameborder': 0
     }));
 });
+
 // Animate in the movies when the page loads
 $(document).ready(function () {
   $('.movie-tile').hide().first().show("fast", function showNext() {

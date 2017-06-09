@@ -38,3 +38,6 @@ class Config:
 
     # Configuration for the Flask-Bcrypt Extension
     BCRYPT_LEVEL = Decouple('BCRYPT_LEVEL')
+
+    # TMDB Movies Api Key
+    TMDB_API_KEY = Decouple('TMDB_API_KEY')

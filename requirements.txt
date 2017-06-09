@@ -1,5 +1,6 @@
+dj-database-url==0.4.2
 Flask==0.12.2
 Flask-SQLAlchemy==2.2
 Flask-WTF==0.14.2
 python-decouple==3.0
-dj-database-url==0.4.2
+requests==2.17.3
