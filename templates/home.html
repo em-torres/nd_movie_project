@@ -7,9 +7,9 @@
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" media="screen">
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" media="screen">
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </head>
   <body>
@@ -42,7 +42,7 @@
         <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{{ movie.trailer_youtube_url }}" data-toggle="modal" data-target="#trailer">
           <img src="{{ movie.poster_image }}" width="220" height="342">
           <h2>{{movie.title}}</h2>
-          <p><strong>Duration:</strong> {{ movie.duration }}</p>
+          <p><strong>Duration:</strong> {{ movie.duration }} mins.</p>
           <p><strong>Storyline:</strong> {{ movie.storyline }}</p>
         </div>
       {% endfor %}
@@ -54,8 +54,8 @@
         <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{{ show.trailer_youtube_url }}" data-toggle="modal" data-target="#trailer">
           <img src="{{ show.poster_image }}" width="220" height="342">
           <h2>{{show.title}}</h2>
-          <p><strong>Duration:</strong> {{ show.duration }} mins * <strong>Episodes:</strong> {{ show.episode }}</p>
-          <p><strong>Seasons:</strong> {{ show.season }} * <strong>TV Station:</strong> {{ show.tv_station }}</p>
+          <p><strong>Duration:</strong> {{ show.duration }} mins - <strong>Episodes:</strong> {{ show.episode }}</p>
+          <p><strong>Seasons:</strong> {{ show.season }} - <strong>TV Station:</strong> {{ show.tv_station }}</p>
         </div>
       {% endfor %}
     </div>

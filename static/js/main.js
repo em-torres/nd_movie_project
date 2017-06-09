@@ -21,4 +21,7 @@ $(document).ready(function () {
   $('.movie-tile').hide().first().show("fast", function showNext() {
     $(this).next("div").show("fast", showNext);
   });
+
+  $('.movie-tile').css('display','block');
+  $('.movie-tile').show()
 });
