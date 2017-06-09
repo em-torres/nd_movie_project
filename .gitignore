@@ -1,5 +1,5 @@
 # Database
-.db
+*.db
 
 # Jetbrains IDE
 .idea
@@ -7,3 +7,6 @@
 # Python Modules
 .pyc
 __pycache__
+
+# Environment Files
+.env
